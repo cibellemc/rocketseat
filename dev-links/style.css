@@ -8,8 +8,8 @@
     --text-color: white;
     --bg-image: url(./assets/bg-mobile.jpg) ;
     --border-color: rgba(255, 255, 255, 0.5);
-    --background-color: rgba(255, 255, 255, 0.1);
-    --background-hover: rgba(255, 255, 255, 0.05);
+    --background-color: rgba(255, 255, 255, 0.05);
+    --background-hover: rgba(255, 255, 255, 0.02);
     --social-link-hover: rgba(255, 255, 255, 0.2);
     /*quando tá tema preto fica botão branco e lua preta*/
     --buttom: var(--text-color) url(/assets/moon-stars.svg) no-repeat center;
@@ -26,7 +26,7 @@
     --buttom: var(--text-color) url(/assets/sun-white.svg) no-repeat center;
 }
 
-body{
+body {
     /*background-image: url(./assets/bg-mobile.jpg);
     background-repeat: no-repeat;
     background-position: top center;
@@ -36,18 +36,17 @@ body{
     */
 
     background: var(--bg-image) no-repeat top center/cover;
-
+    height: 100vh; /*altura se adapta a disponivel*/
 }
 
 body * {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
-    height: 100vh; /*altura se adapta a disponivel*/
 }
 
 #container {
     width: 100%;
-    max-width: 580px;
+    max-width: 588px;
     margin: 56px auto 0;
     padding: 0 24px;
 }
@@ -86,11 +85,17 @@ body * {
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+
+    animation: deslizar-volta 0.2s;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--social-link-hover);
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    /*nome da animação, tempo de execução e se mentém a posição adquirida pelo to*/
+    animation: deslizar .2s forwards;
 }
 
 #switch span{
@@ -170,10 +175,31 @@ footer {
 /*media queres, p/ dispositivos maiores que 700px*/
 @media(min-width: 700px) {
     :root{
-        --bg-url: url(./assets/bg-desktop-dark.jpg)
+        --bg-url: url(./assets/bg-desktop-dark.jpg);
     }
 
     .light{
-        --bg-url: url(./assets/bg-desktop-light.jpg)
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+/*animações*/
+@keyframes deslizar{
+    from{
+        left: 0;
+    }
+
+    to{
+        left: 50%; /*quando chega no fim volta pro inicial*/
+    }
+}
+
+@keyframes deslizar-volta{
+    from{
+        left: 50%;
+    }
+
+    to{
+        left: 0; /*quando chega no fim volta pro inicial*/
     }
 }
