@@ -18,8 +18,9 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 
 <br>
 
+<!-- pasta para o git conseguir acessar a foto -->
 <p align="center">
-  <img alt="projeto DevLinks" src="assets/capa.jpg" width="100%">
+  <img alt="projeto DevLinks" src=".github/capa.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
