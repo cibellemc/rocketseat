@@ -6,24 +6,24 @@
 
 :root {
     --text-color: white;
-    --bg-image: url(./assets/bg-mobile.jpg) ;
+    --bg-image: url(assets/bg-mobile.jpg) ;
     --border-color: rgba(255, 255, 255, 0.5);
     --background-color: rgba(255, 255, 255, 0.05);
     --background-hover: rgba(255, 255, 255, 0.02);
     --social-link-hover: rgba(255, 255, 255, 0.2);
     /*quando tá tema preto fica botão branco e lua preta*/
-    --buttom: var(--text-color) url(/assets/moon-stars.svg) no-repeat center;
+    --buttom: var(--text-color) url(assets/moon-stars.svg) no-repeat center;
 }
 
 .light {
     --text-color: black;
-    --bg-image: url(./assets/bg-mobile-light.jpg) ;
+    --bg-image: url(assets/bg-mobile-light.jpg) ;
     --border-color: rgba(0, 0, 0, 0.5);
     --background-color: rgba(0, 0, 0, 0.05);
     --background-color: rgba(0, 0, 0, 0.02);
     --social-link-hover:  rgba(0, 0, 0, 0.1);
     /*quando tá tema preto fica botão preto e sol branco*/
-    --buttom: var(--text-color) url(/assets/sun-white.svg) no-repeat center;
+    --buttom: var(--text-color) url(assets/sun-white.svg) no-repeat center;
 }
 
 body {
